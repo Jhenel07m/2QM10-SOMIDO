@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo-class Challenge</title>
+<style>
+body{
+background-color:skyblue;
+}
+header{
+background-color: pink;
+color:purple; 
+}
+main{
+background-color:pink;
+}
+button {
+    background-color: silver;
+    color: red;
+    font-size: 30px;
+    padding: 10px 20px;
+    border: solid red 3px;
+    cursor: pointer;
+    transition: background-color 0.3s, font-size 0.3s, color 0.3s;
+}
+button:hover {
+    background-color: black;
+}
+button:active {
+    font-size: 10px;
+    color: blue;
+}
+input[type="text"] {
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    transition: border 0.3s, color 0.3s;
+}
+
+input[type="text"]:focus {
+    border: 5px solid skyblue;
+}
+input[type="text"]:focus::placeholder {
+    color: transparent;
+}
+input[type="text"]:not(:placeholder-shown) {
+    color: brown;
+}
+a {
+font-size:25px;
+font-family:monospace ;
+    color: purple;
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s, font-weight 0.3s;
+}
+a:hover {
+    color: red;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+a:active {
+    font-weight: bold;
+}
+h1::first-letter {
+    font-size: 200%;
+    color: blue;
+    font-weight: bold;
+    font-family:cursive;
+}
+nav{
+padding: 20px;
+}
+* {
+    transition: all 0.3s ease;
+}
+</style>
+    <link rel="stylesheet" href="challenge.css">
+</head>
+<body>
+<center>
+    <header>
+        <h1>Welcome to the CSS Pseudo-class Challenge!</h1>
+    </header>
+    <main>
+<nav>
+        <button>Click Me!</button>
+</nav>
+        <input type="text" placeholder="Enter your name">
+<nav>
+        <a href="#">Visit our website</a>
+</nav>
+</center>
+    </main>
+</body>
+</html>
